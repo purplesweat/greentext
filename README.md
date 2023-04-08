@@ -1,5 +1,5 @@
 # greentext
-### cmatrix but less bloated
+### cmatrix in 88 lines of code
 
 ## y tho?
 I wanted to see how far I could push malloc and free...
