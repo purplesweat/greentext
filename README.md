@@ -14,4 +14,6 @@ To install, just use
 and it will install into $PREFIX/bin
 
 to install to a different $PREFIX, use
-`$ sudo PREFIX=/some/prefix make install`
+`$ vi Makefile`
+**change the PREFIX**
+`$ sudo make install`
