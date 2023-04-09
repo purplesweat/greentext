@@ -38,6 +38,8 @@ void put_streak(streak* s) {
     if (s == NULL) return;
     if (s->y < maxY)
         mvprintw((int) s->y, s->x, "%c", (char) (rand_int(33, 127)));
+    else
+        mvprintw(maxY, s->x, " ");
     mvprintw((int) s->y - s->len, s->x, " ");
     mvprintw((int) s->y - s->len - 1, s->x, " ");
     (s->y) += (s->speed);
@@ -65,8 +67,8 @@ void draw_streaks() {
         __streak = streaks[i];
         put_streak(__streak);
         if (__streak->y - __streak->len > maxY && streak_ptr > 0) {
-            free(__streak);
-            __streak = streaks[--streak_ptr];
+            free(streaks[i]);
+            streaks[i] = streaks[--streak_ptr];
         }
     }
 }
@@ -76,7 +78,7 @@ void add_new_random_streak() {
         0,
         rand_int(0, maxX),
         rand_int(MIN_SIZE, MAX_SIZE),
-        rand_double(0.5, 1.5)
+        rand_double(0.75, 1.25)
     );
 }
 
