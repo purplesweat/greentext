@@ -15,5 +15,7 @@ and it will install into $PREFIX/bin
 
 to install to a different $PREFIX, use
 `$ vi Makefile`
+
 **change the PREFIX**
+
 `$ sudo make install`
