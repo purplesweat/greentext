@@ -1,6 +1,5 @@
 CC=cc
 CCFLAGS=-O2
-LIBPATHS=
 LIBS=-lncurses
 
 PREFIX?=/usr/local
