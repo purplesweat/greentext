@@ -62,12 +62,10 @@ void init() {
 }
 
 void draw_streaks() {
-    streak* __streak;
     for (int i = 0; i < streak_ptr; i++) {
-        __streak = streaks[i];
-        put_streak(__streak);
-        if (__streak->y - __streak->len > maxY && streak_ptr > 0) {
-            mvprintw(maxY-1, __streak->x, " ");
+        put_streak(streaks[i]);
+        if (streaks[i]->y - streaks[i]->len > maxY && streak_ptr > 0) {
+            mvprintw(maxY-1, streaks[i]->x, " ");
             free(streaks[i]);
             streaks[i] = streaks[--streak_ptr];
         }
