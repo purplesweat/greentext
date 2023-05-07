@@ -37,7 +37,7 @@ streak* new_streak(double y, int x, int len, double speed) {
 void put_streak(streak* s) {
     if (s == NULL) return;
     if (s->y < maxY)
-        mvprintw((int) s->y, s->x, "%c", (char) (rand_int(33, 127)));
+        mvprintw((int) s->y, s->x, "%c", (char) (rand_int(33, 126)));
     else
         mvprintw(maxY, s->x, " ");
     mvprintw((int) s->y - s->len, s->x, " ");
