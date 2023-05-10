@@ -1,16 +1,19 @@
 CC=cc
-CCFLAGS=-O2
-LIBS=-lncurses -ltinfo
+CFLAGS=$$(pkg-config --cflags ncurses)
+CFLAGS+=-O2
+LIBS=$$(pkg-config --libs ncurses)
 
 PREFIX?=/usr/local
+PROGNAME=greentext
 
 .PHONY: install clean
 
-greentext: src/main.c
-	$(CC) $(CCFLAGS) src/main.c -o greentext $(LIBS)
+$(PROGNAME): src/main.c
+	$(CC) $(CFLAGS) src/main.c -o $(PROGNAME) $(LIBS)
+	strip $(PROGNAME)
 
 install: greentext
-	cp greentext $(PREFIX)/bin
+	cp $(PROGNAME) $(PREFIX)/bin
 
 clean:
-	rm greentext
+	rm -f $(PROGNAME)
