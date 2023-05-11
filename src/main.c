@@ -4,7 +4,7 @@
 #include <time.h>
 #include "streak.h"
 
-#define MAXSTREAKS  512
+#define MAXSTREAKS  128
 #define FRAME       20000
 #define GREEN       1
 #define MIN_SIZE    (maxY / 3)
