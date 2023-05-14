@@ -17,5 +17,5 @@ to install to a different $PREFIX, use
 
 `$ sudo make install`
 
-#Known Issues:
+##Known Issues:
 Its a memory hog (For a tiny program anyway). But it never surpasses 2.1 megabytes, so I don't think its a memory leak...
