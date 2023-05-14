@@ -1,5 +1,5 @@
 # greentext
-### cmatrix in 108 lines of code
+### cmatrix in 131 lines of code
 
 ## y tho?
 I wanted to see how far I could push malloc and free...
@@ -16,3 +16,6 @@ to install to a different $PREFIX, use
 **change the PREFIX**
 
 `$ sudo make install`
+
+#Known Issues:
+Its a memory hog (For a tiny program anyway). But it never surpasses 2.1 megabytes, so I don't think its a memory leak...
